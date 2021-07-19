@@ -66,6 +66,9 @@ def getText(tw):
     """
     logme.debug(__name__ + ':getText')
     text = tw['full_text']
+    
+    text = text.replace('&amp;', '&')
+    
     #text = text.replace("http", " http")
     #text = text.replace("pic.twitter", " pic.twitter")
     #text = text.replace("\n", " ")
